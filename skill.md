@@ -1,50 +1,155 @@
 # OCI Cost Estimator スキル
 
-Claude Code がこのプロジェクトで作業する際の参照ドキュメント。
+Claude Code / Cline / Codex がこのプロジェクトを使う際の参照ドキュメント。
 
-## プロジェクト概要
+## 概要
 
-YAML で OCI 構成を定義し、OCI Price List API から単価を取得して CSV 見積りを生成するツール。
+OCI の見積りを2つのモードで実行できる。
 
-## 重要ファイル
-
-| ファイル | 役割 |
+| モード | 使い方 |
 |---|---|
-| `estimate.py` | メインスクリプト |
-| `sku_map.yaml` | サービス種別 → SKU 対応表 |
-| `example.yaml` | 構成定義サンプル |
-| `docs/sku_reference.md` | SKU 調査メモ・Price List API 仕様 |
+| **対話モード** | ユーザーと会話しながらリソース要件を聞き出して見積る |
+| **Excel モード** | ユーザーが提供した Excel ファイルを読んで見積る |
 
-## Price List API
+どちらのモードも最終的に `estimate.py` を呼び出して計算・CSV 出力する。
 
-- URL: `https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY`
-- 認証不要、JSON 形式
-- 主要フィールド:
-  - `partNumber` — SKU
-  - `displayName` — 表示名
-  - `metricName` — 課金単位
-  - `currencyCodeLocalizations[].prices[].value` — 単価
+---
 
-## 月額計算ロジック
+## 対話モード
+
+### ユーザーから聞き出す情報
+
+以下を順番に確認する。必要ないものはスキップしてよい。
 
 ```
-# 時間課金（Compute OCPU/Memory）
-月額 = 単価 × 数量 × hours_per_month × count
-
-# 月額課金（Storage, Transfer）
-月額 = 単価 × 数量 × count
+1. プロジェクト名（任意）
+2. 通貨（デフォルト: JPY）
+3. 月あたり稼働時間（デフォルト: 744h = 31日×24時間）
+4. リソース一覧:
+   - Compute: Shape（E4/E5）、OCPU 数、メモリ GB、台数
+   - Block Volume: サイズ GB、本数
+   - Object Storage: サイズ GB（標準 or 低頻度）
+   - Autonomous DB: ATP or ADW、ECPU 数、ストレージ GB
+   - アウトバウンド通信: GB/月
 ```
 
-## CSV 出力形式
+### 質問例
 
 ```
-リソース名, タイプ, 数量, 単位, 単価(JPY), 月額(JPY)
-...
-合計, , , , , ZZZ
+見積りを作成します。以下を教えてください。
+
+1. プロジェクト名は何ですか？
+2. Compute が必要ですか？（Shape、OCPU 数、メモリ、台数）
+3. データベースは必要ですか？（Autonomous DB ATP / ADW）
+4. ストレージは必要ですか？（Block Volume / Object Storage）
+5. アウトバウンド通信量の目安はありますか？
 ```
 
-## 開発ルール
+---
 
-- コミットメッセージは1行の日本語でシンプルに
-- SKU は `sku_map.yaml` で一元管理
-- 新しいサービス追加は `sku_map.yaml` と `README.md` の対応表を両方更新
+## Excel モード
+
+### 手順
+
+1. ユーザーから Excel ファイルを受け取る
+2. ファイルを読んで以下を抽出する:
+   - サービス名（Compute、ADB など）
+   - スペック（OCPU 数、メモリ、ECPU 数、ストレージ容量など）
+   - 台数・数量
+3. 対応する `type` キーに変換する（下記 対応サービス一覧 参照）
+4. JSON を組み立てて `estimate.py` を呼び出す
+
+### 注意
+
+- 列名はお客さんによって異なる。内容を見て柔軟に解釈すること
+- 単位に注意（TB → GB 変換など）
+- 不明なサービスは無視せずユーザーに確認する
+
+---
+
+## estimate.py の呼び方
+
+### 基本
+
+```bash
+python estimate.py --resources '<JSON>'
+```
+
+### JSON フォーマット（リソース配列）
+
+```json
+[
+  {"name": "Webサーバー", "type": "compute_e4", "ocpus": 4, "memory_gb": 32, "count": 2},
+  {"name": "ブロックボリューム", "type": "block_volume", "size_gb": 500, "count": 2},
+  {"name": "Autonomous DB", "type": "autonomous_db_atp", "ecpus": 4, "storage_gb": 1024},
+  {"name": "オブジェクトストレージ", "type": "object_storage", "size_gb": 1000},
+  {"name": "アウトバウンド通信", "type": "outbound_transfer_apac", "size_gb": 100}
+]
+```
+
+### YAML ファイルを渡す場合
+
+```bash
+python estimate.py --resources example.yaml
+```
+
+### オプション
+
+| オプション | 説明 | デフォルト |
+|---|---|---|
+| `--currency` | 通貨コード | JPY |
+| `--hours` | 月あたり稼働時間 | 744 |
+| `--project` | プロジェクト名 | （空） |
+| `--no-csv` | CSV 出力を省略 | false |
+
+### 出力
+
+- ターミナル: 見積り結果の表示
+- `output/estimate_<timestamp>.csv`: CSV ファイル
+- 標準出力: JSON（AI が結果を使う場合に利用）
+
+---
+
+## 対応サービス一覧
+
+| サービス | type キー | 必要パラメータ |
+|---|---|---|
+| Compute E4 | `compute_e4` | `ocpus`, `memory_gb`, `count` |
+| Compute E5 | `compute_e5` | `ocpus`, `memory_gb`, `count` |
+| Block Volume | `block_volume` | `size_gb`, `count` |
+| Object Storage（標準） | `object_storage` | `size_gb` |
+| Object Storage（低頻度） | `object_storage_ia` | `size_gb` |
+| Autonomous DB ATP | `autonomous_db_atp` | `ecpus`, `storage_gb` |
+| Autonomous DB ADW | `autonomous_db_adw` | `ecpus`, `storage_gb` |
+| アウトバウンド通信（APAC） | `outbound_transfer_apac` | `size_gb` |
+
+---
+
+## 結果の伝え方
+
+見積り結果は以下の形式でユーザーに伝える。
+
+```
+プロジェクト: ○○システム
+
+| リソース名          | 月額（JPY）   |
+|---------------------|--------------|
+| Webサーバー（OCPU） | 12,345 円    |
+| Webサーバー（MEM）  | 3,456 円     |
+| ...                 | ...          |
+| 合計                | XX,XXX 円    |
+
+CSV を output/ に保存しました。
+```
+
+---
+
+## セットアップ（同僚向け）
+
+```bash
+git clone https://github.com/morimoriharuki/oci-cost-estimator.git
+cd oci-cost-estimator
+pip install -r requirements.txt
+```
+
+これだけで使えます。API キー不要。
