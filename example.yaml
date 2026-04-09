@@ -1,28 +1,50 @@
+# OCI Cost Estimator - 構成定義サンプル
+# partNumber は services/*.yaml を参照して特定する
+# unit_type: hourly（時間課金）/ monthly（月額固定）/ request（リクエスト数）/ free（無料）
+
 project: "サンプル構成見積り"
 currency: JPY
 hours_per_month: 744  # 31日 × 24時間
 
 resources:
-  - name: "Web サーバー"
-    type: compute_e4
-    ocpus: 4
-    memory_gb: 32
-    count: 2
+  # Compute E4 × 2台（OCPUとMemoryは別行）
+  - name: "Webサーバー OCPU (E4 × 4OCPU × 2台)"
+    partNumber: "B93113"
+    qty: 8            # 4OCPU × 2台
+    unit_type: hourly
 
-  - name: "DB サーバー用ブロックボリューム"
-    type: block_volume
-    size_gb: 500
-    count: 2
+  - name: "Webサーバー Memory (E4 × 32GB × 2台)"
+    partNumber: "B93114"
+    qty: 64           # 32GB × 2台
+    unit_type: hourly
 
-  - name: "Autonomous DB (ATP)"
-    type: autonomous_db_atp
-    ecpus: 4
-    storage_gb: 1024
+  # Block Volume
+  - name: "ブロックボリューム (500GB × 2本)"
+    partNumber: "B91961"
+    qty: 1000         # 500GB × 2本
+    unit_type: monthly
 
-  - name: "オブジェクトストレージ"
-    type: object_storage
-    size_gb: 1000
+  # Autonomous DB ATP
+  - name: "ADB ATP ECPU (4ECPU)"
+    partNumber: "B95702"
+    qty: 4
+    unit_type: hourly
 
-  - name: "アウトバウンド通信"
-    type: outbound_transfer_apac
-    size_gb: 100
+  - name: "ADB ATP Storage (1TB)"
+    partNumber: "B95706"
+    qty: 1024
+    unit_type: monthly
+
+  # Object Storage（無料枠超過分）
+  - name: "オブジェクトストレージ (1TB)"
+    partNumber: "B91628"
+    qty: 1000
+    unit_type: monthly
+    note: "20GB まで Always Free"
+
+  # アウトバウンド通信（無料枠超過分）
+  - name: "アウトバウンド通信 APAC (100GB)"
+    partNumber: "B93455"
+    qty: 100
+    unit_type: monthly
+    note: "月10TB まで Always Free"

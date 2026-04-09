@@ -69,29 +69,68 @@ OCI の見積りを2つのモードで実行できる。
 
 ## estimate.py の呼び方
 
+### 手順（重要）
+
+1. ユーザーが必要なサービスを伝える
+2. **該当カテゴリの `services/*.yaml` を読んで `partNumber` を特定する**
+3. `estimate.py --resources` に partNumber を渡して実行する
+
 ### 基本
 
 ```bash
+# JSON 文字列で渡す
 python estimate.py --resources '<JSON>'
+
+# YAML / JSON ファイルで渡す
+python estimate.py --resources example.yaml
+
+# SKU をキーワード検索（サービスが不明なとき）
+python estimate.py --search "E5 OCPU"
+python estimate.py --search "network firewall"
+
+# 全 SKU 一覧を表示
+python estimate.py --list-skus
 ```
 
-### JSON フォーマット（リソース配列）
+### JSON フォーマット（partNumber 指定方式）
 
 ```json
 [
-  {"name": "Webサーバー", "type": "compute_e4", "ocpus": 4, "memory_gb": 32, "count": 2},
-  {"name": "ブロックボリューム", "type": "block_volume", "size_gb": 500, "count": 2},
-  {"name": "Autonomous DB", "type": "autonomous_db_atp", "ecpus": 4, "storage_gb": 1024},
-  {"name": "オブジェクトストレージ", "type": "object_storage", "size_gb": 1000},
-  {"name": "アウトバウンド通信", "type": "outbound_transfer_apac", "size_gb": 100}
+  {
+    "name": "Webサーバー OCPU (E4×4OCPU×2台)",
+    "partNumber": "B93113",
+    "qty": 8,
+    "unit_type": "hourly"
+  },
+  {
+    "name": "Webサーバー Memory (E4×32GB×2台)",
+    "partNumber": "B93114",
+    "qty": 64,
+    "unit_type": "hourly"
+  },
+  {
+    "name": "ADB ATP ECPU",
+    "partNumber": "B95702",
+    "qty": 4,
+    "unit_type": "hourly"
+  },
+  {
+    "name": "ADB ATP Storage (1TB)",
+    "partNumber": "B95706",
+    "qty": 1024,
+    "unit_type": "monthly"
+  }
 ]
 ```
 
-### YAML ファイルを渡す場合
+### unit_type の選び方
 
-```bash
-python estimate.py --resources example.yaml
-```
+| unit_type | 計算式 | 使うサービス例 |
+|---|---|---|
+| `hourly` | 単価 × qty × hours_per_month | Compute OCPU/Memory、ADB ECPU |
+| `monthly` | 単価 × qty | Storage GB、ADB Storage GB |
+| `request` | 単価 × qty | API Gateway（100万リクエスト単位）|
+| `free` | 0円 | Always Free 対象サービス |
 
 ### オプション
 
@@ -105,7 +144,7 @@ python estimate.py --resources example.yaml
 ### 出力
 
 - ターミナル: 見積り結果の表示
-- `output/estimate_<timestamp>.csv`: CSV ファイル
+- `output/<project>_<timestamp>.csv`: CSV ファイル
 - 標準出力: JSON（AI が結果を使う場合に利用）
 
 ---
