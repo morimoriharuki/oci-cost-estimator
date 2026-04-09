@@ -1,0 +1,95 @@
+# storage - Block Volume/Object Storage/File Storage/Archive Storage/ZFS
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+block_volume:
+  b91445:
+    partNumber: "B91445"
+    displayName: "Storage - Block Volume - Free 200GB"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: free
+    note: "Always Free対象（200GBまで）"
+  b91961:
+    partNumber: "B91961"
+    displayName: "Storage - Block Volume - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 3.9525
+  b91962:
+    partNumber: "B91962"
+    displayName: "Storage - Block Volume - Performance Units"
+    unit: "Performance Units Per Gigabyte Per Month"
+    unit_type: monthly
+    price_jpy: 0.2635
+
+object_storage:
+  b91627:
+    partNumber: "B91627"
+    displayName: "Object Storage - Requests"
+    unit: "10,000 Requests per Month"
+    unit_type: free
+    note: "月5万リクエストまで無料"
+  b91628:
+    partNumber: "B91628"
+    displayName: "Object Storage - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: free
+    note: "Always Free対象（20GB）"
+
+archive_storage:
+  b91633:
+    partNumber: "B91633"
+    displayName: "Archive Storage - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: free
+    note: "Always Free対象"
+
+infrequent_access_storage:
+  b93000:
+    partNumber: "B93000"
+    displayName: "Infrequent Access Storage - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: free
+    note: "Always Free対象"
+  b93001:
+    partNumber: "B93001"
+    displayName: "Infrequent Access Storage - Data Retrieval"
+    unit: "GB Storage Retrieved Per Month"
+    unit_type: free
+    note: "Always Free対象"
+
+file_storage:
+  b89057:
+    partNumber: "B89057"
+    displayName: "File Storage - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 46.5
+  b109546:
+    partNumber: "B109546"
+    displayName: "File Storage Service - High Performance Mount Target"
+    unit: "Performance Units Per Gigabyte Per Month"
+    unit_type: monthly
+    price_jpy: 46.5
+
+file_storage_lustre:
+  b111091:
+    partNumber: "B111091"
+    displayName: "OCI File Storage with Lustre Service - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 13.33
+  b111092:
+    partNumber: "B111092"
+    displayName: "OCI File Storage with Lustre Service - Performance"
+    unit: "Performance Units Per Gigabyte Per Month"
+    unit_type: monthly
+    price_jpy: 0.0775
+
+zfs_storage:
+  b95410:
+    partNumber: "B95410"
+    displayName: "Oracle ZFS Storage - High Availability"
+    unit: "Instance Per Hour"
+    unit_type: hourly
+    price_jpy: 286.75

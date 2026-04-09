@@ -1,0 +1,309 @@
+# ai - Generative AI/Data Science/Language/Vision/Speech/OAC/Data Flow/OpenSearch
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+generative_ai_on_demand:
+  # Cohere
+  b108077:
+    partNumber: "B108077"
+    displayName: "OCI Generative AI - Large Cohere"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 2.418
+  b108078:
+    partNumber: "B108078"
+    displayName: "OCI Generative AI - Small Cohere"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.1395
+  b108079:
+    partNumber: "B108079"
+    displayName: "OCI Generative AI - Embed Cohere"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.155
+  # Meta Llama
+  b108080:
+    partNumber: "B108080"
+    displayName: "OCI Generative AI - Large Meta"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.279
+  b110517:
+    partNumber: "B110517"
+    displayName: "OCI Generative AI - Meta Llama 3.1 405B"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 4.1385
+  b111035:
+    partNumber: "B111035"
+    displayName: "OCI Generative AI - Meta Llama 4 Scout"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.279
+  b111036:
+    partNumber: "B111036"
+    displayName: "OCI Generative AI - Meta Llama 4 Maverick"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.279
+  # xAI Grok
+  b111438:
+    partNumber: "B111438"
+    displayName: "OCI Generative AI - xAI - Grok 3 or Grok 4 - Input Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 465
+  b111439:
+    partNumber: "B111439"
+    displayName: "OCI Generative AI - xAI - Grok 3 or Grok 4 - Output Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 2325
+  b111440:
+    partNumber: "B111440"
+    displayName: "OCI Generative AI - xAI - Grok 3 Mini - Input Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 46.5
+  b111441:
+    partNumber: "B111441"
+    displayName: "OCI Generative AI - xAI - Grok 3 Mini - Output Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 77.5
+  # Google Gemini
+  b111847:
+    partNumber: "B111847"
+    displayName: "OCI Generative AI - Google - Gemini 2.5 Pro - Input (<200K tokens)"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 193.75
+  b111849:
+    partNumber: "B111849"
+    displayName: "OCI Generative AI - Google - Gemini 2.5 Pro - Output (<200K tokens)"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 1550
+  b111851:
+    partNumber: "B111851"
+    displayName: "OCI Generative AI - Google - Gemini 2.5 Flash - Input"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 46.5
+  b111853:
+    partNumber: "B111853"
+    displayName: "OCI Generative AI - Google - Gemini 2.5 Flash - Output"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 387.5
+  # OpenAI (OCI経由)
+  b112004:
+    partNumber: "B112004"
+    displayName: "OCI Generative AI - OpenAI - gpt-oss-120b - Input Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 23.25
+  b112005:
+    partNumber: "B112005"
+    displayName: "OCI Generative AI - OpenAI - gpt-oss-120b - Output Tokens"
+    unit: "1,000,000 Tokens"
+    unit_type: monthly
+    price_jpy: 93
+
+generative_ai_dedicated:
+  b108082:
+    partNumber: "B108082"
+    displayName: "OCI Generative AI - Large Cohere - Dedicated"
+    unit: "AI Unit Per Hour"
+    unit_type: hourly
+    price_jpy: 3720
+  b108085:
+    partNumber: "B108085"
+    displayName: "OCI Generative AI - Large Meta - Dedicated"
+    unit: "AI Unit Per Hour"
+    unit_type: hourly
+    price_jpy: 1860
+  b111959:
+    partNumber: "B111959"
+    displayName: "OCI Generative AI - Model Import"
+    unit: "AI Unit Per Hour"
+    unit_type: hourly
+    price_jpy: 155
+
+generative_ai_search:
+  b111973:
+    partNumber: "B111973"
+    displayName: "OCI Generative AI - Web Search"
+    unit: "1000 Requests"
+    unit_type: request
+    price_jpy: 1550
+  b112414:
+    partNumber: "B112414"
+    displayName: "OCI Generative AI - File Search Storage"
+    unit: "Gigabyte Storage Per Hour"
+    unit_type: hourly
+    price_jpy: 0.651
+  b112577:
+    partNumber: "B112577"
+    displayName: "OCI Generative AI - Vector Store Storage"
+    unit: "Gigabyte Storage Per Hour"
+    unit_type: hourly
+    price_jpy: 0.651
+  b112578:
+    partNumber: "B112578"
+    displayName: "OCI Generative AI - Vector Store Retrieval"
+    unit: "1000 Requests"
+    unit_type: request
+    price_jpy: 31
+
+generative_ai_agents:
+  b110461:
+    partNumber: "B110461"
+    displayName: "OCI Generative AI Agents"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.465
+  b110462:
+    partNumber: "B110462"
+    displayName: "OCI Generative AI Agents - Knowledge Base Storage"
+    unit: "Gigabyte Storage Per Hour"
+    unit_type: hourly
+    price_jpy: 1.302
+  b110463:
+    partNumber: "B110463"
+    displayName: "OCI Generative AI Agents - Data Ingestion"
+    unit: "10,000 Transactions"
+    unit_type: request
+    price_jpy: 0.0465
+
+ai_language:
+  b93423:
+    partNumber: "B93423"
+    displayName: "OCI - AI Services - Language - Pre-trained Inferencing"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+  b95917:
+    partNumber: "B95917"
+    displayName: "OCI - Language - Custom Inferencing"
+    unit: "1,000 Transactions"
+    unit_type: request
+    price_jpy: 542.5
+  b95920:
+    partNumber: "B95920"
+    displayName: "OCI - Language - Text Translation"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+
+ai_vision:
+  b94973:
+    partNumber: "B94973"
+    displayName: "Vision - Image Analysis"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+  b94974:
+    partNumber: "B94974"
+    displayName: "Vision - OCR"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+  b111539:
+    partNumber: "B111539"
+    displayName: "OCI - Vision - Stream Video Analysis"
+    unit: "Processed Video Minute"
+    unit_type: monthly
+    price_jpy: 23.25
+
+ai_speech:
+  b94896:
+    partNumber: "B94896"
+    displayName: "Speech"
+    unit: "Transcription Hour"
+    unit_type: free
+    note: "Always Free対象"
+
+document_understanding:
+  b96110:
+    partNumber: "B96110"
+    displayName: "OCI - Document Understanding - OCR"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+  b96112:
+    partNumber: "B96112"
+    displayName: "OCI - Document Understanding - Document Extraction"
+    unit: "1,000 Transactions"
+    unit_type: free
+    note: "Always Free対象"
+
+oracle_analytics_cloud:
+  b89630:
+    partNumber: "B89630"
+    displayName: "Oracle Analytics Cloud - Professional - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 166.6715
+  b89631:
+    partNumber: "B89631"
+    displayName: "Oracle Analytics Cloud - Enterprise - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 333.343
+  b92682:
+    partNumber: "B92682"
+    displayName: "Oracle Analytics Cloud - Professional - Users"
+    unit: "User Per Month"
+    unit_type: monthly
+    price_jpy: 2480
+  b92683:
+    partNumber: "B92683"
+    displayName: "Oracle Analytics Cloud - Enterprise - Users"
+    unit: "User Per Month"
+    unit_type: monthly
+    price_jpy: 12400
+
+digital_assistant:
+  b90260:
+    partNumber: "B90260"
+    displayName: "Oracle Digital Assistant Cloud Service"
+    unit: "Requests per Hour"
+    unit_type: hourly
+    price_jpy: 3.596
+
+data_integration:
+  b92598:
+    partNumber: "B92598"
+    displayName: "OCI Data Integration - Workspace Usage"
+    unit: "Workspace Usage Per Hour"
+    unit_type: hourly
+    price_jpy: 24.8
+  b92599:
+    partNumber: "B92599"
+    displayName: "OCI Data Integration - Data Processed"
+    unit: "Gigabyte of Data Processed Per Hour"
+    unit_type: hourly
+    price_jpy: 6.2
+  b93306:
+    partNumber: "B93306"
+    displayName: "OCI Data Integration - Pipeline Operator Execution"
+    unit: "Execution Hour"
+    unit_type: free
+
+search_opensearch:
+  b93709:
+    partNumber: "B93709"
+    displayName: "OCI Search with OpenSearch HA"
+    unit: "Node Per Hour"
+    unit_type: hourly
+    price_jpy: 38.75
+
+ai_data_platform:
+  b111363:
+    partNumber: "B111363"
+    displayName: "Oracle AI Data Platform"
+    unit: "AI Data Platform Unit"
+    unit_type: monthly
+    price_jpy: 0.155

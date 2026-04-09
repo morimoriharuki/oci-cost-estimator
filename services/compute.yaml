@@ -1,0 +1,235 @@
+# compute - VM/BM Shape（E3/E4/E5/E6/A1/A2/A4/X9/GPU）
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+compute_virtual_machine:
+  b88514:
+    partNumber: "B88514"
+    displayName: "Compute - Virtual Machine Standard - X7"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 9.889
+  b91444:
+    partNumber: "B91444"
+    displayName: "Compute - Virtual Machine Standard - E2 Micro - Free"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b92306:
+    partNumber: "B92306"
+    displayName: "Compute - Standard - E3 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 3.875
+  b92307:
+    partNumber: "B92307"
+    displayName: "Compute - Standard - E3 - Memory"
+    unit: "Gigabytes Per Hour"
+    unit_type: hourly
+    price_jpy: 0.2325
+  b93113:
+    partNumber: "B93113"
+    displayName: "Compute - Standard - E4 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 3.875
+  b93114:
+    partNumber: "B93114"
+    displayName: "Compute - Standard - E4 - Memory"
+    unit: "Gigabyte Per Hour"
+    unit_type: hourly
+    price_jpy: 0.2325
+  b93297:
+    partNumber: "B93297"
+    displayName: "Compute - Standard - A1 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象（月4 OCPU・24GB まで）"
+  b93298:
+    partNumber: "B93298"
+    displayName: "Compute - Standard - A1 - Memory"
+    unit: "Gigabyte Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b93311:
+    partNumber: "B93311"
+    displayName: "Compute - Optimized - X9 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 8.37
+  b93312:
+    partNumber: "B93312"
+    displayName: "Compute - Optimized - X9 - Memory"
+    unit: "Gigabyte Per Hour"
+    unit_type: hourly
+    price_jpy: 0.2325
+  b94176:
+    partNumber: "B94176"
+    displayName: "Compute - Standard - X9 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 6.2
+  b97384:
+    partNumber: "B97384"
+    displayName: "Compute - Standard - E5 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 4.65
+  b97385:
+    partNumber: "B97385"
+    displayName: "Compute - Standard - E5 - Memory"
+    unit: "Gigabytes Per Hour"
+    unit_type: hourly
+    price_jpy: 0.31
+  b109529:
+    partNumber: "B109529"
+    displayName: "Compute - Standard - A2 OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2.17
+  b109530:
+    partNumber: "B109530"
+    displayName: "Compute - Standard - A2 Memory"
+    unit: "Gigabytes Per Hour"
+    unit_type: hourly
+    price_jpy: 0.31
+  b111129:
+    partNumber: "B111129"
+    displayName: "OCI - Compute - Standard - E6 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 4.65
+  b111130:
+    partNumber: "B111130"
+    displayName: "OCI - Compute - Standard - E6 - Memory"
+    unit: "Gigabytes Per Hour"
+    unit_type: hourly
+    price_jpy: 0.31
+  b112145:
+    partNumber: "B112145"
+    displayName: "OCI - Compute - Standard - A4 - OCPU"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2.139
+  b112146:
+    partNumber: "B112146"
+    displayName: "OCI - Compute - Standard - A4 - Memory"
+    unit: "Gigabyte Per Hour"
+    unit_type: hourly
+    price_jpy: 0.4185
+
+compute_bare_metal:
+  b88513:
+    partNumber: "B88513"
+    displayName: "Compute - Bare Metal Standard - X7"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 9.889
+  b90398:
+    partNumber: "B90398"
+    displayName: "Compute - Bare Metal Standard - HPC - X7"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 11.625
+  b96531:
+    partNumber: "B96531"
+    displayName: "OCI - Compute - HPC - E5"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 6.82
+
+compute_gpu:
+  b88517:
+    partNumber: "B88517"
+    displayName: "Compute - Bare Metal GPU Standard - X7"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 197.625
+  b89734:
+    partNumber: "B89734"
+    displayName: "Compute - GPU Standard - V2"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 457.25
+  b95907:
+    partNumber: "B95907"
+    displayName: "Compute - GPU - A100 - v2"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 620
+  b95909:
+    partNumber: "B95909"
+    displayName: "Compute - GPU - A10"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 310
+  b98415:
+    partNumber: "B98415"
+    displayName: "Oracle Cloud Infrastructure - Compute - GPU - H100"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 1550
+  b109479:
+    partNumber: "B109479"
+    displayName: "Compute - GPU - L40S"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 542.5
+  b109485:
+    partNumber: "B109485"
+    displayName: "OCI - Compute - GPU - MI300X"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 930
+  b110519:
+    partNumber: "B110519"
+    displayName: "OCI - Compute - GPU - H200"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 1550
+  b110978:
+    partNumber: "B110978"
+    displayName: "OCI - Compute - GPU - B200"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2170
+  b110979:
+    partNumber: "B110979"
+    displayName: "OCI - Compute - GPU - GB200"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2480
+  b111758:
+    partNumber: "B111758"
+    displayName: "OCI - Compute - GPU - MI355X"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 1333
+  b112140:
+    partNumber: "B112140"
+    displayName: "OCI - Compute - GPU - GB300"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2790
+  b112237:
+    partNumber: "B112237"
+    displayName: "Oracle Cloud Infrastructure - Compute - GPU - B300"
+    unit: "GPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2325
+
+compute_os:
+  b88318:
+    partNumber: "B88318"
+    displayName: "Compute - Windows OS"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 14.26
+
+secure_desktops:
+  b95518:
+    partNumber: "B95518"
+    displayName: "Secure Desktop"
+    unit: "Desktop Per Month"
+    unit_type: monthly
+    price_jpy: 3100

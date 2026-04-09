@@ -1,0 +1,89 @@
+# operations - Logging/Monitoring/APM/Log Analytics/Ops Insights/Notifications/Fleet Management
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+logging:
+  b92593:
+    partNumber: "B92593"
+    displayName: "OCI - Logging - Storage"
+    unit: "Gigabyte Log Storage Per Month"
+    unit_type: free
+    note: "Always Free対象"
+
+monitoring:
+  b90925:
+    partNumber: "B90925"
+    displayName: "Monitoring - Ingestion"
+    unit: "Million Datapoints"
+    unit_type: free
+    note: "Always Free対象"
+  b90926:
+    partNumber: "B90926"
+    displayName: "Monitoring - Retrieval"
+    unit: "Million Datapoints"
+    unit_type: free
+    note: "Always Free対象"
+
+log_analytics:
+  b92809:
+    partNumber: "B92809"
+    displayName: "OCI Log Analytics - Archival Storage"
+    unit: "Logging Analytics Storage Unit Per Hour"
+    unit_type: hourly
+    price_jpy: 3.1
+    note: "1 Storage Unit = 10GB/日 × 対象日数"
+  b95634:
+    partNumber: "B95634"
+    displayName: "OCI Log Analytics - Active Storage"
+    unit: "Logging Analytics Storage Unit Per Month"
+    unit_type: monthly
+    price_jpy: 57660
+    note: "1 Storage Unit = 10GB/日 × 対象日数"
+
+ops_insights:
+  b92888:
+    partNumber: "B92888"
+    displayName: "OCI Ops Insights for Oracle Autonomous Databases - Basic"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b92889:
+    partNumber: "B92889"
+    displayName: "OCI Ops Insights for Oracle Cloud Databases"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 2.325
+  b92890:
+    partNumber: "B92890"
+    displayName: "OCI Ops Insights for External Oracle Databases and Host"
+    unit: "Host CPU Core Per Hour"
+    unit_type: hourly
+    price_jpy: 2.325
+  b93706:
+    partNumber: "B93706"
+    displayName: "OCI Ops Insights for Warehouse - Instance"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 83.3435
+
+notifications:
+  b90940:
+    partNumber: "B90940"
+    displayName: "Notifications - HTTPS Delivery"
+    unit: "Million Delivery Operations"
+    unit_type: free
+    note: "Always Free対象"
+  b90941:
+    partNumber: "B90941"
+    displayName: "Notifications - Email Delivery"
+    unit: "1,000 Emails Sent"
+    unit_type: free
+    note: "Always Free対象"
+
+fleet_application_management:
+  b110475:
+    partNumber: "B110475"
+    displayName: "OCI Fleet Application Management Service"
+    unit: "1 Managed Resource Per Month"
+    unit_type: free
+    note: "Always Free対象"

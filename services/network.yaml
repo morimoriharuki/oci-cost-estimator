@@ -1,0 +1,114 @@
+# network - Load Balancer/FastConnect/VPN/WAF/DNS/Network Firewall/転送量
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+load_balancer:
+  b93030:
+    partNumber: "B93030"
+    displayName: "Load Balancer Base"
+    unit: "Load Balancer"
+    unit_type: free
+    note: "Always Free対象（1インスタンス）"
+  b93031:
+    partNumber: "B93031"
+    displayName: "Load Balancer Bandwidth"
+    unit: "Mbps Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+
+fastconnect:
+  b88325:
+    partNumber: "B88325"
+    displayName: "OCI - FastConnect 1 Gbps"
+    unit: "Port Hour"
+    unit_type: hourly
+    price_jpy: 32.9375
+  b88326:
+    partNumber: "B88326"
+    displayName: "OCI - FastConnect 10 Gbps"
+    unit: "Port Hour"
+    unit_type: hourly
+    price_jpy: 197.625
+  b93126:
+    partNumber: "B93126"
+    displayName: "OCI - FastConnect 100 Gbps"
+    unit: "Port Hour"
+    unit_type: hourly
+    price_jpy: 1666.25
+  b107975:
+    partNumber: "B107975"
+    displayName: "OCI - FastConnect 400 Gbps"
+    unit: "Port Hour"
+    unit_type: hourly
+    price_jpy: 3100
+
+dns:
+  b88525:
+    partNumber: "B88525"
+    displayName: "Networking - DNS"
+    unit: "1,000,000 Queries"
+    unit_type: monthly
+    price_jpy: 131.75
+  b90327:
+    partNumber: "B90327"
+    displayName: "Networking - DNS Traffic Management"
+    unit: "1,000,000 DNS Traffic Management Queries"
+    unit_type: monthly
+    price_jpy: 620
+
+outbound_transfer:
+  b93455:
+    partNumber: "B93455"
+    displayName: "Outbound Data Transfer - APAC"
+    unit: "Gigabyte Outbound Data Transfer Per Month"
+    unit_type: free
+    note: "Always Free対象（月10TB）、超過分は要確認"
+
+waf:
+  b94277:
+    partNumber: "B94277"
+    displayName: "Web Application Firewall - Requests"
+    unit: "1,000,000 Incoming Requests Per Month"
+    unit_type: free
+    note: "Always Free対象（月200万リクエストまで）"
+  b94579:
+    partNumber: "B94579"
+    displayName: "Web Application Firewall - Instance"
+    unit: "Instance Per Month"
+    unit_type: free
+    note: "Always Free対象"
+
+network_firewall:
+  b95403:
+    partNumber: "B95403"
+    displayName: "Network Firewall Instance"
+    unit: "Instance Per Hour"
+    unit_type: hourly
+    price_jpy: 426.25
+  b95404:
+    partNumber: "B95404"
+    displayName: "Network Firewall Data Processing"
+    unit: "Gigabyte (GB) of Data Processed"
+    unit_type: free
+
+email_delivery:
+  b88523:
+    partNumber: "B88523"
+    displayName: "OCI - Email Delivery"
+    unit: "1,000 Emails Sent"
+    unit_type: free
+    note: "月1,000通まで無料"
+
+health_check:
+  b90323:
+    partNumber: "B90323"
+    displayName: "OCI - Health Checks - Basic"
+    unit: "Endpoints Per Month"
+    unit_type: monthly
+    price_jpy: 46.5
+  b90325:
+    partNumber: "B90325"
+    displayName: "OCI - Health Checks - Premium"
+    unit: "Endpoints Per Month"
+    unit_type: monthly
+    price_jpy: 201.5

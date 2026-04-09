@@ -1,0 +1,87 @@
+# developer - Visual Builder/OIC/SOA/Blockchain/WebLogic/WebCenter/GoldenGate
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+visual_builder:
+  b89646:
+    partNumber: "B89646"
+    displayName: "Oracle Visual Builder"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 191.6575
+  b90203:
+    partNumber: "B90203"
+    displayName: "Visual Builder Studio - Additional Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 248
+
+integration_cloud:
+  b89639:
+    partNumber: "B89639"
+    displayName: "Oracle Integration Cloud Service - Standard"
+    unit: "5K Messages Per Hour"
+    unit_type: hourly
+    price_jpy: 100.006
+  b89640:
+    partNumber: "B89640"
+    displayName: "Oracle Integration Cloud Service - Enterprise"
+    unit: "5K Messages Per Hour"
+    unit_type: hourly
+    price_jpy: 199.9965
+  b89643:
+    partNumber: "B89643"
+    displayName: "Oracle Integration Cloud Service - Standard - BYOL"
+    unit: "20K Messages Per Hour"
+    unit_type: hourly
+    price_jpy: 50.003
+
+soa_suite:
+  b92450:
+    partNumber: "B92450"
+    displayName: "Oracle SOA Suite for OCI"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 112.0805
+
+blockchain:
+  b92302:
+    partNumber: "B92302"
+    displayName: "Blockchain Platform - Standard"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 33.325
+  b92303:
+    partNumber: "B92303"
+    displayName: "Blockchain Platform - Enterprise"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 66.6655
+
+weblogic:
+  b91346:
+    partNumber: "B91346"
+    displayName: "WebLogic Server Enterprise Edition for OCI"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 40.0055
+  b91347:
+    partNumber: "B91347"
+    displayName: "WebLogic Server Suite for OCI"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 72.013
+
+webcenter:
+  b108783:
+    partNumber: "B108783"
+    displayName: "WebCenter Content For OCI"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 185.8295
+  b108781:
+    partNumber: "B108781"
+    displayName: "WebCenter Portal For OCI"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 134.664

@@ -1,0 +1,119 @@
+# security - Vault(KMS)/Bastion/Cloud Guard/Data Safe/IAM/Access Governance/DR
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+key_management:
+  b92092:
+    partNumber: "B92092"
+    displayName: "Key Management Service - Key Versions"
+    unit: "Key Version Per Month"
+    unit_type: free
+    note: "HSMキー月100バージョンまで無料"
+  b90328:
+    partNumber: "B90328"
+    displayName: "OCI - Key Management - Private Vault"
+    unit: "Virtual Private Vault Per Hour"
+    unit_type: hourly
+    price_jpy: 577.22
+  b98100:
+    partNumber: "B98100"
+    displayName: "OCI - External Key Management"
+    unit: "Key Version Per Month"
+    unit_type: monthly
+    price_jpy: 465
+  b99597:
+    partNumber: "B99597"
+    displayName: "OCI - Dedicated Key Management (Minimum 3 HSM Partitions)"
+    unit: "HSM Partition Per Hour"
+    unit_type: hourly
+    price_jpy: 271.25
+
+data_safe:
+  b91631:
+    partNumber: "B91631"
+    displayName: "Data Safe - Audit Record Collection Over 1 Million Records"
+    unit: "10,000 Audit Records Per Target Per Month"
+    unit_type: monthly
+    price_jpy: 15.5
+  b91632:
+    partNumber: "B91632"
+    displayName: "Data Safe for Database Cloud Service - Databases"
+    unit: "Each"
+    unit_type: free
+    note: "Always Free対象"
+
+cloud_guard:
+  b108188:
+    partNumber: "B108188"
+    displayName: "Oracle Cloud Guard Instance Security Enterprise"
+    unit: "Node Per Hour"
+    unit_type: hourly
+    price_jpy: 1.0695
+  b108189:
+    partNumber: "B108189"
+    displayName: "Oracle Cloud Guard Instance Security Standard"
+    unit: "Node Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+
+threat_intelligence:
+  b94173:
+    partNumber: "B94173"
+    displayName: "Oracle Threat Intelligence Service"
+    unit: "API Calls"
+    unit_type: free
+    note: "Always Free対象"
+
+access_governance:
+  b97172:
+    partNumber: "B97172"
+    displayName: "Oracle Access Governance for OCI - Workforce User"
+    unit: "Workforce User Per Month"
+    unit_type: monthly
+    price_jpy: 15.5
+  b97179:
+    partNumber: "B97179"
+    displayName: "Oracle Access Governance Premium - Consumer User"
+    unit: "Consumer User Per Month"
+    unit_type: monthly
+    price_jpy: 2.48
+  b97181:
+    partNumber: "B97181"
+    displayName: "Oracle Access Governance Premium - Workforce User"
+    unit: "Workforce User Per Month"
+    unit_type: monthly
+    price_jpy: 465
+
+iam:
+  b90936:
+    partNumber: "B90936"
+    displayName: "Oracle Identity Foundation Cloud Service"
+    unit: "Each"
+    unit_type: free
+    note: "Always Free対象"
+  b93493:
+    partNumber: "B93493"
+    displayName: "Identity and Access Management - External User"
+    unit: "User Per Month"
+    unit_type: monthly
+    price_jpy: 2.48
+  b93495:
+    partNumber: "B93495"
+    displayName: "Identity and Access Management - Premium"
+    unit: "User Per Month"
+    unit_type: monthly
+    price_jpy: 496
+
+full_stack_disaster_recovery:
+  b110274:
+    partNumber: "B110274"
+    displayName: "OCI Full Stack Disaster Recovery Service"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 0.496
+  b95485:
+    partNumber: "B95485"
+    displayName: "OCI Full Stack Disaster Recovery Service"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 1.984

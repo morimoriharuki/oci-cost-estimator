@@ -110,18 +110,42 @@ python estimate.py --resources example.yaml
 
 ---
 
-## 対応サービス一覧
+## カテゴリ別 SKU ファイル
 
-| サービス | type キー | 必要パラメータ |
+見積り対象サービスに応じて、該当ファイルを参照すること。**必要なカテゴリだけ読む**（トークン節約）。
+
+| カテゴリ | ファイル | 主なサービス |
 |---|---|---|
-| Compute E4 | `compute_e4` | `ocpus`, `memory_gb`, `count` |
-| Compute E5 | `compute_e5` | `ocpus`, `memory_gb`, `count` |
-| Block Volume | `block_volume` | `size_gb`, `count` |
-| Object Storage（標準） | `object_storage` | `size_gb` |
-| Object Storage（低頻度） | `object_storage_ia` | `size_gb` |
-| Autonomous DB ATP | `autonomous_db_atp` | `ecpus`, `storage_gb` |
-| Autonomous DB ADW | `autonomous_db_adw` | `ecpus`, `storage_gb` |
-| アウトバウンド通信（APAC） | `outbound_transfer_apac` | `size_gb` |
+| Compute | `services/compute.yaml` | E3/E4/E5/E6/A1/A2/A4/X9/GPU/BM/Secure Desktop |
+| Database | `services/database.yaml` | ADB(ATP/ADW/JSON/APEX)/MySQL HeatWave/NoSQL/Redis/Oracle DB/PostgreSQL/GoldenGate |
+| Storage | `services/storage.yaml` | Block Volume/Object Storage/Archive/低頻度/File Storage/Lustre/ZFS |
+| Network | `services/network.yaml` | LB/FastConnect/WAF/DNS/Network Firewall/転送量/Health Check |
+| Container | `services/container.yaml` | OKE/Functions/API Gateway/Streaming/Queue/Batch |
+| AI & Analytics | `services/ai.yaml` | Gen AI（Cohere/Llama/Grok/Gemini/OpenAI）/Language/Vision/Speech/OAC/Data Integration/OpenSearch |
+| Security | `services/security.yaml` | Vault(KMS)/Cloud Guard/Data Safe/IAM/Access Governance/DR |
+| Operations | `services/operations.yaml` | Logging/Monitoring/Log Analytics/Ops Insights/Notifications/Fleet Management |
+| Developer | `services/developer.yaml` | Visual Builder/OIC/SOA/Blockchain/WebLogic/WebCenter |
+
+## 対応サービス一覧（主要）
+
+| サービス | カテゴリファイル | partNumber 例 |
+|---|---|---|
+| Compute E4 | compute.yaml | B93113(OCPU), B93114(Mem) |
+| Compute E5 | compute.yaml | B97384(OCPU), B97385(Mem) |
+| GPU H100 | compute.yaml | B98415 |
+| ADB ATP | database.yaml | B95702(ECPU), B95706(Storage) |
+| ADB ADW | database.yaml | B95701(ECPU), B95754(Storage) |
+| MySQL HeatWave | database.yaml | B108030(ECPU), B96626(HW) |
+| Block Volume | storage.yaml | B91961 |
+| Object Storage | storage.yaml | B91628（無料枠あり） |
+| FastConnect 10G | network.yaml | B88326 |
+| Network Firewall | network.yaml | B95403 |
+| OKE Enhanced | container.yaml | B96545 |
+| Gen AI Llama 4 | ai.yaml | B111035/B111036 |
+| Gen AI Grok 4 | ai.yaml | B111438/B111439 |
+| Vault Private | security.yaml | B90328 |
+| Log Analytics | operations.yaml | B95634 |
+| OIC Standard | developer.yaml | B89639 |
 
 ---
 

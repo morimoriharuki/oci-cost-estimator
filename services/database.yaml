@@ -1,0 +1,277 @@
+# database - ADB/MySQL HeatWave/Oracle DB/NoSQL/Cache/PostgreSQL/GoldenGate
+# 最終更新: 2026-04-09
+# 取得元: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+
+autonomous_database:
+  b91391:
+    partNumber: "B91391"
+    displayName: "Oracle Autonomous AI Lakehouse - Free"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象（ADW 1インスタンス）"
+  b91393:
+    partNumber: "B91393"
+    displayName: "Oracle Autonomous AI Transaction Processing - Free"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象（ATP 1インスタンス）"
+  b95701:
+    partNumber: "B95701"
+    displayName: "Oracle Autonomous AI Lakehouse - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 52.08
+  b95702:
+    partNumber: "B95702"
+    displayName: "Oracle Autonomous AI Transaction Processing - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 52.08
+  b95703:
+    partNumber: "B95703"
+    displayName: "Oracle Autonomous AI Lakehouse - ECPU - BYOL"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 12.5085
+  b95704:
+    partNumber: "B95704"
+    displayName: "Oracle Autonomous AI Transaction Processing - ECPU - BYOL"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 12.5085
+  b95754:
+    partNumber: "B95754"
+    displayName: "Oracle Autonomous AI Database Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 3.782
+  b95706:
+    partNumber: "B95706"
+    displayName: "Oracle Autonomous AI Database Storage for Transaction Processing"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 17.918
+  b110316:
+    partNumber: "B110316"
+    displayName: "Oracle Autonomous AI Database - Developer"
+    unit: "Instance Per Hour"
+    unit_type: hourly
+    price_jpy: 6.0605
+  b111127:
+    partNumber: "B111127"
+    displayName: "Oracle Autonomous AI Database Dedicated Backup Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 3.9525
+
+autonomous_database_json:
+  b93307:
+    partNumber: "B93307"
+    displayName: "Oracle Autonomous AI JSON Database - Free"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b99708:
+    partNumber: "B99708"
+    displayName: "Oracle Autonomous AI JSON Database - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 12.5085
+
+apex_application_development:
+  b93320:
+    partNumber: "B93320"
+    displayName: "Oracle APEX Application Development - Free"
+    unit: "OCPU Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b99709:
+    partNumber: "B99709"
+    displayName: "Oracle APEX Application Development - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 12.5085
+
+mysql_heatwave:
+  b108030:
+    partNumber: "B108030"
+    displayName: "MySQL Database - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 5.673
+  b92426:
+    partNumber: "B92426"
+    displayName: "MySQL Database - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 6.2
+  b96625:
+    partNumber: "B96625"
+    displayName: "OCI - HeatWave - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 3.1
+  b96626:
+    partNumber: "B96626"
+    displayName: "OCI - HeatWave"
+    unit: "HeatWave Capacity Per Hour"
+    unit_type: hourly
+    price_jpy: 1.705
+  b109380:
+    partNumber: "B109380"
+    displayName: "MySQL Database - ECPU - Free"
+    unit: "ECPU Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+  b109381:
+    partNumber: "B109381"
+    displayName: "OCI HeatWave - Free"
+    unit: "HeatWave Capacity Per Hour"
+    unit_type: free
+    note: "Always Free対象"
+
+nosql:
+  b89737:
+    partNumber: "B89737"
+    displayName: "Oracle NoSQL Database Cloud - Write"
+    unit: "Write Unit Per Month"
+    unit_type: monthly
+    price_jpy: 19.437
+  b89738:
+    partNumber: "B89738"
+    displayName: "Oracle NoSQL Database Cloud - Read"
+    unit: "Read Unit Per Month"
+    unit_type: monthly
+    price_jpy: 0.992
+  b89739:
+    partNumber: "B89739"
+    displayName: "Oracle NoSQL Database Cloud - Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 10.23
+  b92627:
+    partNumber: "B92627"
+    displayName: "Oracle NoSQL Database Cloud - Write - Free"
+    unit: "Write Unit Per Month"
+    unit_type: free
+    note: "Always Free対象"
+  b92628:
+    partNumber: "B92628"
+    displayName: "Oracle NoSQL Database Cloud - Read - Free"
+    unit: "Read Unit Per Month"
+    unit_type: free
+    note: "Always Free対象"
+  b92629:
+    partNumber: "B92629"
+    displayName: "Oracle NoSQL Database Cloud - Storage - Free"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: free
+    note: "Always Free対象"
+
+cache_redis:
+  b98217:
+    partNumber: "B98217"
+    displayName: "Cache with Redis - Low Memory (up to 10 GB per node)"
+    unit: "Redis Memory Gigabyte per Hour"
+    unit_type: hourly
+    price_jpy: 3.007
+  b99591:
+    partNumber: "B99591"
+    displayName: "Cache with Redis - High Memory (over 10 GB per node)"
+    unit: "Redis Memory Gigabyte per Hour"
+    unit_type: hourly
+    price_jpy: 2.108
+
+oracle_base_database:
+  b90569:
+    partNumber: "B90569"
+    displayName: "Oracle Base Database Service - Standard"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 33.325
+  b90570:
+    partNumber: "B90570"
+    displayName: "Oracle Base Database Service - Enterprise"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 66.6655
+  b90571:
+    partNumber: "B90571"
+    displayName: "Oracle Base Database Service - High Performance"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 137.5005
+  b90572:
+    partNumber: "B90572"
+    displayName: "Oracle Base Database Service - Extreme Performance"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 208.3355
+  b111585:
+    partNumber: "B111585"
+    displayName: "Oracle Base Database Service - Standard - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 8.339
+  b111586:
+    partNumber: "B111586"
+    displayName: "Oracle Base Database Service - Enterprise - ECPU"
+    unit: "ECPU Per Hour"
+    unit_type: hourly
+    price_jpy: 16.6625
+  b111584:
+    partNumber: "B111584"
+    displayName: "Oracle Base Database Service - Database Storage"
+    unit: "Gigabyte (GB) Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 9.2225
+
+postgresql:
+  b99060:
+    partNumber: "B99060"
+    displayName: "Database with PostgreSQL - X86"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 15.19
+  b99062:
+    partNumber: "B99062"
+    displayName: "Database Optimized Storage"
+    unit: "Gigabyte Storage Capacity Per Month"
+    unit_type: monthly
+    price_jpy: 11.16
+
+goldengate:
+  b92992:
+    partNumber: "B92992"
+    displayName: "OCI GoldenGate"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 208.3355
+  b92993:
+    partNumber: "B92993"
+    displayName: "OCI GoldenGate - BYOL"
+    unit: "OCPU Per Hour"
+    unit_type: hourly
+    price_jpy: 50.003
+
+database_migration:
+  b93199:
+    partNumber: "B93199"
+    displayName: "OCI Database Migration"
+    unit: "Migration Hour"
+    unit_type: monthly
+    price_jpy: 31
+
+autonomous_recovery:
+  b95240:
+    partNumber: "B95240"
+    displayName: "Oracle Database Autonomous Recovery Service"
+    unit: "Virtualized GB Per Month"
+    unit_type: monthly
+    price_jpy: 4.743
+  b95241:
+    partNumber: "B95241"
+    displayName: "Oracle Database Zero Data Loss Autonomous Recovery Service"
+    unit: "Virtualized GB Per Month"
+    unit_type: monthly
+    price_jpy: 6.2
