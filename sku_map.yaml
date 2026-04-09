@@ -1,0 +1,67 @@
+# OCI Price List API SKU 対応表
+# API URL: https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=JPY
+# 最終確認: 2026-04-09
+
+compute_e4:
+  ocpu:
+    partNumber: B93113
+    displayName: "Oracle Cloud Compute - General Purpose - VM - E4 based - OCPU"
+    unit: "OCPU Per Hour"
+  memory:
+    partNumber: B93114
+    displayName: "Oracle Cloud Compute - General Purpose - VM - E4 based - Memory"
+    unit: "Gigabyte Per Hour"
+
+compute_e5:
+  ocpu:
+    partNumber: B97384
+    displayName: "Oracle Cloud Compute - General Purpose - VM - E5 based - OCPU"
+    unit: "OCPU Per Hour"
+  memory:
+    partNumber: B97385
+    displayName: "Oracle Cloud Compute - General Purpose - VM - E5 based - Memory"
+    unit: "Gigabytes Per Hour"
+
+block_volume:
+  storage:
+    partNumber: B91961
+    displayName: "Oracle Cloud Infrastructure - Block Volume Storage"
+    unit: "GB Per Month"
+
+object_storage:
+  storage:
+    partNumber: B91628
+    displayName: "Oracle Cloud Infrastructure - Object Storage"
+    unit: "GB Per Month"
+
+object_storage_ia:
+  storage:
+    partNumber: B93000
+    displayName: "Oracle Cloud Infrastructure - Object Storage - Infrequent Access"
+    unit: "GB Per Month"
+
+autonomous_db_atp:
+  ecpu:
+    partNumber: B95702
+    displayName: "Oracle Autonomous Transaction Processing - ECPU"
+    unit: "ECPU Per Hour"
+  storage:
+    partNumber: B95706
+    displayName: "Oracle Autonomous Transaction Processing - Storage"
+    unit: "GB Per Month"
+
+autonomous_db_adw:
+  ecpu:
+    partNumber: B95701
+    displayName: "Oracle Autonomous Data Warehouse - ECPU"
+    unit: "ECPU Per Hour"
+  storage:
+    partNumber: B95754
+    displayName: "Oracle Autonomous Data Warehouse - Storage"
+    unit: "GB Per Month"
+
+outbound_transfer_apac:
+  transfer:
+    partNumber: B93455
+    displayName: "Oracle Cloud Infrastructure - Outbound Data Transfer - APAC"
+    unit: "GB Per Month"

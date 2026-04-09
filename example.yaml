@@ -1,0 +1,28 @@
+project: "サンプル構成見積り"
+currency: JPY
+hours_per_month: 744  # 31日 × 24時間
+
+resources:
+  - name: "Web サーバー"
+    type: compute_e4
+    ocpus: 4
+    memory_gb: 32
+    count: 2
+
+  - name: "DB サーバー用ブロックボリューム"
+    type: block_volume
+    size_gb: 500
+    count: 2
+
+  - name: "Autonomous DB (ATP)"
+    type: autonomous_db_atp
+    ecpus: 4
+    storage_gb: 1024
+
+  - name: "オブジェクトストレージ"
+    type: object_storage
+    size_gb: 1000
+
+  - name: "アウトバウンド通信"
+    type: outbound_transfer_apac
+    size_gb: 100
