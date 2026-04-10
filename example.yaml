@@ -18,10 +18,15 @@ resources:
     qty: 64           # 32GB × 2台
     unit_type: hourly
 
-  # Block Volume
-  - name: "ブロックボリューム (500GB × 2本)"
+  # Block Volume（Storage + VPU はセットで必要）
+  - name: "ブロックボリューム Storage (500GB × 2本)"
     partNumber: "B91961"
     qty: 1000         # 500GB × 2本
+    unit_type: monthly
+
+  - name: "ブロックボリューム VPU (Balanced 10VPU × 500GB × 2本)"
+    partNumber: "B91962"
+    qty: 10000        # 10 VPU × 1000GB
     unit_type: monthly
 
   # Autonomous DB ATP

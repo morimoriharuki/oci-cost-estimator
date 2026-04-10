@@ -123,6 +123,26 @@ python estimate.py --list-skus
 ]
 ```
 
+### 複数 SKU がセットで必要なサービス（注意）
+
+1コンポーネント作成時に複数 SKU が必ず発生するサービス。見積り時は全行を追加すること。
+
+| サービス | 必須 SKU | qty の考え方 |
+|---|---|---|
+| Compute (Flexible) | OCPU + Memory | OCPU 数 × 台数 / メモリ GB × 台数 |
+| Block Volume | Storage + **VPU** | GB 合計 / VPU値 × GB 合計（Balanced=10） |
+| ADB (Serverless) | ECPU + Storage | ECPU 数 / ストレージ GB |
+| Base Database | OCPU + Storage + VPU | （Block Volume と同様） |
+| OKE (Enhanced) | Control Plane + Compute | クラスター数 / ワーカーの OCPU + Memory |
+
+**Block Volume VPU の目安：**
+
+| 用途 | VPU | qty 計算例（500GB×2本） |
+|---|---|---|
+| バックアップ・アーカイブ | 0 | 0（無料） |
+| OS ディスク・一般用途 | **10（Balanced）** | 10 × 1000 = 10,000 |
+| DB データ領域 | 20 | 20 × 1000 = 20,000 |
+
 ### unit_type の選び方
 
 | unit_type | 計算式 | 使うサービス例 |
@@ -175,7 +195,7 @@ python estimate.py --list-skus
 | ADB ATP | database.yaml | B95702(ECPU), B95706(Storage) |
 | ADB ADW | database.yaml | B95701(ECPU), B95754(Storage) |
 | MySQL HeatWave | database.yaml | B108030(ECPU), B96626(HW) |
-| Block Volume | storage.yaml | B91961 |
+| Block Volume | storage.yaml | B91961(Storage) + **B91962(VPU)** ※セット必須 |
 | Object Storage | storage.yaml | B91628（無料枠あり） |
 | FastConnect 10G | network.yaml | B88326 |
 | Network Firewall | network.yaml | B95403 |
